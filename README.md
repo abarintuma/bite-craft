@@ -2,7 +2,7 @@
 
 **Food for everyone. A mobile food-ordering interface for Sanyu Judith.**
 
-Built from the supplied Figma prototype screenshots using plain HTML, CSS and JavaScript. The app stays **phone-width (maximum 440px)** even on a large desktop screen.
+Built from the supplied Figma prototype screenshots using plain HTML, CSS and JavaScript. The app stays **phone-width (maximum 440px)** even on a large desktop screen. Main food lists use **one full-width card per row**, matching reference B; the horizontal popular-food and category carousels remain separate. The primary colour is **#B41F04**, with **Plus Jakarta Sans** headings and **Inter** body text.
 
 ![BiteCraft implementation](docs/screenshots/home-desktop.jpg)
 

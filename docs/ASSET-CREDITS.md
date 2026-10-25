@@ -25,4 +25,4 @@ Food and kitchen photography is from Unsplash, downloaded for a self-contained d
 
 Food-image download parameters: `?w=900&q=85&fit=crop`.
 
-Fonts: Manrope and DM Sans through Google Fonts. The application also works with system-font fallbacks. SVG interface icons and the BiteCraft favicon are code-native assets included in the source.
+Fonts: Plus Jakarta Sans and Inter through Google Fonts. The application also works with system-font fallbacks. SVG interface icons and the BiteCraft favicon are code-native assets included in the source.

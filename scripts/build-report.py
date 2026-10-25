@@ -10,7 +10,7 @@ from PIL import Image as PILImage, ImageDraw, ImageFont
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / 'docs'
-ORANGE = colors.HexColor('#ed4c25')
+ORANGE = colors.HexColor('#B41F04')
 INK = colors.HexColor('#29231e')
 MUTED = colors.HexColor('#7e7267')
 
@@ -29,9 +29,10 @@ for x,title in [(40,'01  Discover'),(430,'02  Choose'),(820,'03  Confirm')]:
         draw.rectangle((x+20,170,x+320,285),outline='#aaa097',width=2)
         draw.text((x+40,215),'Featured offer / photo',font=font,fill='#777')
         for j in range(4):draw.ellipse((x+22+j*77,310,x+70+j*77,358),outline='#aaa097',width=2)
-        for j in range(2):
-            draw.rectangle((x+20+j*155,390,x+165+j*155,550),outline='#aaa097',width=2)
-            draw.text((x+35+j*155,565),'Dish + price',font=font,fill='#777')
+        draw.rectangle((x+20,390,x+320,495),outline='#aaa097',width=2)
+        draw.text((x+35,510),'Dish name + price',font=font,fill='#777')
+        draw.rectangle((x+20,550,x+320,600),outline='#aaa097',width=2)
+        draw.text((x+35,565),'Next full-width card',font=font,fill='#777')
     elif x==430:
         draw.rectangle((x+20,105,x+320,330),outline='#aaa097',width=2)
         draw.line((x+20,105,x+320,330),fill='#ddd',width=2)
@@ -57,7 +58,7 @@ PAGES = [
   ('h','The problem'),
   ('p','People choosing a meal need to compare dishes, see prices, customise an order and confirm the final total without losing their place. BiteCraft organises this journey into small, understandable steps.'),
   ('h','The outcome'),
-  ('p','A working HTML, CSS and JavaScript front end with 24 menu items, eight food categories, local demo accounts, favourites, saved addresses, offers, checkout, order history and simulated tracking. The app stays at a maximum width of 440 CSS pixels on large screens.'),
+  ('p','A working HTML, CSS and JavaScript front end with 24 menu items, eight food categories, local demo accounts, favourites, saved addresses, offers, checkout, order history and simulated tracking. The app stays at a maximum width of 440 CSS pixels on large screens. Main food lists use one full-width card per row, matching reference B, while the category and popular-food carousels scroll horizontally.'),
   ('img',('screenshots/home.jpg','screenshots/profile.jpg','Home screen and Sanyu Judith’s default profile. Actual implementation captures.')),
   ('p','<b>Scope:</b> This is an academic browser demo. It does not collect payments, dispatch food or provide production authentication. Menu prices, ratings and offers are sample content.')
  ]},
@@ -67,7 +68,7 @@ PAGES = [
   ('table',(['Assumed need','Interface response'],[
    ['Find something quickly','Search, categories, food-type filters and recent searches.'],['Stay within a budget','UGX prices, price sorting, budget filters and an itemised total.'],['Avoid ordering mistakes','Descriptions, allergen notes, size, spice, quantity and kitchen notes.'],['Return to favourites','Saved dishes, addresses, history and reorder.'],['Understand progress','Confirmation, receipt and an explicitly simulated tracking timeline.']])),
   ('h','Evidence available'),
-  ('p','The supplied assignment brief, three screenshots of Figma prototypes and the Sanyu Judith photograph were reviewed. The prototypes establish the brand, screen sequence, orange/red actions, food cards and profile identity. No participant interview, survey dataset or original paper sketches were supplied.'),
+  ('p','The supplied assignment brief, three screenshots of Figma prototypes and the Sanyu Judith photograph were reviewed. The prototypes establish the brand, screen sequence, deep-red primary actions, food cards and profile identity. No participant interview, survey dataset or original paper sketches were supplied.'),
   ('h','Basic research to complete before submission'),
   ('p','Interview 3-5 intended users. Ask how they choose meals, what price information they need, how they describe delivery locations and what makes them abandon an order. Record the date, method and anonymised notes. Do not invent quotations or participant counts.'),
   ('h','Usability tasks to validate the assumptions'),
@@ -84,10 +85,10 @@ PAGES = [
   ('p','<b>Submission note:</b> Attach the original paper sketches if the course requires them. The digital wireframes in this report must not be presented as evidence of a paper-sketch process.')
  ]},
  {'title':'From Figma to the web.','kicker':'03 / HIGH-FIDELITY REFERENCE','blocks':[
-  ('p','The supplied Figma screenshots are the design source. The implementation retains the BiteCraft name, orange-to-red actions, warm neutral surfaces, photo-led food browsing, bottom navigation and Sanyu Judith profile. Additional screens complete the interactions beyond the static prototypes.'),
+  ('p','The supplied Figma screenshots are the design source. The implementation retains the BiteCraft name, deep-red primary actions, warm neutral surfaces, photo-led food browsing, bottom navigation and Sanyu Judith profile. Additional screens complete the interactions beyond the static prototypes.'),
   ('img',('figma-overview.jpg',None,'Provided Figma overview: splash, login, home, menu, item, cart and profile screens.')),
   ('table',(['Design element','Implementation'],[
-   ['Brand colour','Orange #ED4C25 with red #CE2918 for primary actions.'],['Type','Manrope headings and DM Sans body text, with system fallbacks.'],['Surfaces','Warm #FAF8F5 canvas, white cards, subtle borders and soft shadows.'],['Spacing','Consistent 22px content gutters; smaller gutters on narrow phones.'],['Navigation','Four persistent tabs; contextual back actions and modal dialogs.']])),
+   ['Brand colour','Primary #B41F04 for actions, active states and brand accents.'],['Type','Plus Jakarta Sans headings and Inter body text, with system fallbacks.'],['Surfaces','Warm #FAF8F5 canvas, white cards, subtle borders and soft shadows.'],['Spacing','Consistent 22px content gutters; smaller gutters on narrow phones.'],['Navigation','Four persistent tabs; contextual back actions and modal dialogs.']])),
   ('h','Source link'),
   ('p','The editable Figma project is complete according to the supplied brief, but its URL was not provided. Add the actual shareable Figma project link to the final submission. Screenshot evidence is bundled in this repository.')
  ]},
@@ -102,7 +103,7 @@ PAGES = [
  {'title':'Built for the small screen.','kicker':'05 / RESPONSIVENESS & ACCESSIBILITY','blocks':[
   ('img',('screenshots/responsive.jpg',None,'Actual browser frames at 320, 390 and 440px. Scrollbars reduce the available content area to 305, 375 and 425px in this environment.')),
   ('h','Responsive behaviour'),
-  ('p','The site uses max-width: 440px with a full-width layout below that size. Desktop space forms a quiet background around the phone-width app. Categories and popular dishes scroll horizontally inside the app; the page itself has no horizontal overflow in the checked frames.'),
+  ('p','The site uses max-width: 440px with a full-width layout below that size. Desktop space forms a quiet background around the phone-width app. Menu, recommendation and favourite lists show one full-width photo card per row, as in reference B. Categories and popular dishes scroll horizontally inside the app; the page itself has no horizontal overflow in the checked frames.'),
   ('h','Interaction and accessibility decisions'),
   ('p','Buttons have descriptive labels. Inputs have labels and native validation. Dialogs use the browser’s modal focus behaviour. The site includes a skip link, visible keyboard focus, a live status region for feedback, active navigation states, reduced-motion support and meaningful image descriptions.'),
   ('h','Verification limits'),
@@ -179,6 +180,6 @@ for n,page in enumerate(PAGES):
     hs.append('</section>');html_sections.append(''.join(hs))
 
 SimpleDocTemplate(str(DOCS/'BiteCraft_Project_Report.pdf'),pagesize=(595.28,841.89),topMargin=56,bottomMargin=47,leftMargin=43,rightMargin=43,title='BiteCraft - UI and UX Project Report',author='Sanyu Judith').build(story,onFirstPage=page_decoration,onLaterPages=page_decoration)
-css='''*{box-sizing:border-box}body{margin:0;background:#eae5df;color:#29231e;font:15px/1.75 system-ui,sans-serif}header{max-width:900px;margin:24px auto;display:flex;justify-content:space-between;gap:15px;padding:0 24px}a{color:#ce391b}section{max-width:900px;margin:24px auto;background:#fffdfa;padding:50px;border-radius:18px;box-shadow:0 5px 25px #39250c08}.kicker{font-size:11px;letter-spacing:2px;color:#ed4c25;font-weight:bold}h1{font-size:36px;line-height:1.2;letter-spacing:-1px;margin:15px 0 30px}h2{font-size:20px;margin-top:25px}p{margin:15px 0}.pair{display:flex;justify-content:center;flex-wrap:wrap;gap:20px;margin:25px 0}.pair img{object-fit:contain;max-width:100%;max-height:520px;align-self:flex-start}.pair:has(img+img) img{max-width:45%}figcaption{width:100%;font-size:12px;color:#7e7267;line-height:1.5}table{border-collapse:collapse;width:100%;font-size:13px;margin:22px 0}td,th{padding:13px;text-align:left;border-bottom:1px solid #ece4da;vertical-align:top}th{background:#fce9df}button{background:#ed4c25;color:white;border:0;padding:10px 16px;border-radius:9px;cursor:pointer}@media(max-width:600px){section{border-radius:0;padding:25px;margin:0 0 15px}h1{font-size:29px}header{flex-wrap:wrap}}@media print{body{background:white}header{display:none}section{box-shadow:none;border-radius:0;break-before:page;margin:0;padding:10px}.pair img{max-height:340px}h1{font-size:28px}table{font-size:11px}p{font-size:12px}}'''
+css='''@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');* {box-sizing:border-box}body{margin:0;background:#eae5df;color:#29231e;font:15px/1.75 Inter,system-ui,sans-serif}header{max-width:900px;margin:24px auto;display:flex;justify-content:space-between;gap:15px;padding:0 24px}a{color:#B41F04}section{max-width:900px;margin:24px auto;background:#fffdfa;padding:50px;border-radius:18px;box-shadow:0 5px 25px #39250c08}.kicker{font-size:11px;letter-spacing:2px;color:#B41F04;font-weight:bold}h1,h2{font-family:'Plus Jakarta Sans',sans-serif}h1{font-size:36px;line-height:1.2;letter-spacing:-1px;margin:15px 0 30px}h2{font-size:20px;margin-top:25px}p{margin:15px 0}.pair{display:flex;justify-content:center;flex-wrap:wrap;gap:20px;margin:25px 0}.pair img{object-fit:contain;max-width:100%;max-height:520px;align-self:flex-start}.pair:has(img+img) img{max-width:45%}figcaption{width:100%;font-size:12px;color:#7e7267;line-height:1.5}table{border-collapse:collapse;width:100%;font-size:13px;margin:22px 0}td,th{padding:13px;text-align:left;border-bottom:1px solid #ece4da;vertical-align:top}th{background:#fce9df}button{background:#B41F04;color:white;border:0;padding:10px 16px;border-radius:9px;cursor:pointer}@media(max-width:600px){section{border-radius:0;padding:25px;margin:0 0 15px}h1{font-size:29px}header{flex-wrap:wrap}}@media print{body{background:white}header{display:none}section{box-shadow:none;border-radius:0;break-before:page;margin:0;padding:10px}.pair img{max-height:340px}h1{font-size:28px}table{font-size:11px}p{font-size:12px}}'''
 (DOCS/'report.html').write_text('<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>BiteCraft - Sanyu Judith - Project Report</title><style>'+css+'</style></head><body><header><a href="../index.html#home">← Back to BiteCraft</a><a href="BiteCraft_Project_Report.pdf">Download PDF report</a><button onclick="window.print()">Print report</button></header>'+''.join(html_sections)+'</body></html>')
 print('Created docs/report.html and docs/BiteCraft_Project_Report.pdf')

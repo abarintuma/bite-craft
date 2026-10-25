@@ -45,3 +45,7 @@ The HTTP preview did not expose `crypto.randomUUID`, initially preventing additi
 - Real payments, emails, push messages and fulfilment are outside the demo.
 
 Screenshots in `docs/screenshots/` show the actual tested implementation. Some figures are cropped to the phone-width shell for readability; desktop captures retain surrounding context.
+
+## Design correction verification
+
+Main food cards now occupy one full-width row in Menu, Home recommendations and Favourites, matching reference B. Popular-food and category carousels remain horizontal. Browser geometry checks confirmed stacked rows without horizontal page overflow in 320, 390 and 440px frames. Computed styles confirmed primary `rgb(180, 31, 4)` (`#B41F04`), Plus Jakarta Sans headings and Inter body text. The cart example still totals UGX 78,500.
