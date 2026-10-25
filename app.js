@@ -1233,7 +1233,7 @@ if (typeof document !== "undefined") {
   ) =>
     `<div class="empty"><div class="empty-icon">${icon(symbol)}</div><h2>${title}</h2><p>${description}</p><button class="primary full" data-go="${go}">${action}</button></div>`;
   const delivery = () =>
-    `<div class="delivery"><button data-action="address-modal" aria-label="Change delivery address">${icon("pin")}<span><span class="eyebrow">Deliver to ${icon("chevron")}</span><span class="location">${escapeHTML(currentAddress().address)}</span></span></button><div class="greeting">Hey ${escapeHTML(data.profile.name.split(" ")[0])} 👋<b>Something delicious?</b></div></div>`;
+    `<div class="delivery"><button data-action="address-modal" aria-label="Change delivery address">${icon("pin")}<span><span class="eyebrow">Deliver to ${icon("chevron")}</span><span class="location">${escapeHTML(currentAddress().address)}</span></span></button><div class="greeting">Hey ${escapeHTML(data.profile.name.split(" ")[0])}<b>Something delicious?</b></div></div>`;
   function toast(message) {
     $("#toast").textContent = message;
     $("#toast").classList.add("visible");
