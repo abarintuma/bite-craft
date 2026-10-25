@@ -910,7 +910,7 @@ const MENU = [
     ingredients: "Maize flour, beans, onion, tomato",
     allergens: "Prepared in a shared kitchen",
     type: "Local delights",
-    img: "https://www.bing.com/images/search?view=detailV2&ccid=CQYGfddq&id=CF0974C2A97089F996FB49D4B59A5C4DB8DDCBA1&thid=OIP.CQYGfddqKo24wcr1nQcLLAHaFP&mediaurl=https%3a%2f%2fuganda-evisa.com%2fimages%2fposho-served-in-a-bowl.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.0906067dd76a2a8db8c1caf59d070b2c%3frik%3docvduE1cmrXUSQ%26pid%3dImgRaw%26r%3d0&exph=1586&expw=2241&q=posho+and+beans&FORM=IRPRST&ck=CC2BE5FF653BA8DC6516D3D419F8DE8D&selectedIndex=3&itb=0",
+    img: "https://uganda-evisa.com/images/posho-served-in-a-bowl.jpg",
     photoSource:
       "https://commons.wikimedia.org/wiki/File:Africa_ugali_and_beans.jpg",
     photoAuthor: "Moseslukyamuzi",
