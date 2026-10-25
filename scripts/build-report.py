@@ -58,7 +58,7 @@ PAGES = [
   ('h','The problem'),
   ('p','People choosing a meal need to compare dishes, see prices, customise an order and confirm the final total without losing their place. BiteCraft organises this journey into small, understandable steps.'),
   ('h','The outcome'),
-  ('p','A working HTML, CSS and JavaScript front end with 24 menu items, eight food categories, local demo accounts, favourites, saved addresses, offers, checkout, order history and simulated tracking. The app stays at a maximum width of 440 CSS pixels on large screens. Main food lists use one full-width card per row, matching reference B, while the category and popular-food carousels scroll horizontally.'),
+  ('p','A working HTML, CSS and JavaScript front end with 41 menu items, eleven food categories, local demo accounts, favourites, saved addresses, offers, checkout, order history and simulated tracking. The app stays at a maximum width of 440 CSS pixels on large screens. Main food lists use one full-width card per row, matching reference B, while the category and popular-food carousels scroll horizontally.'),
   ('img',('screenshots/home.jpg','screenshots/profile.jpg','Home screen and Sanyu Judith’s default profile. Actual implementation captures.')),
   ('p','<b>Scope:</b> This is an academic browser demo. It does not collect payments, dispatch food or provide production authentication. Menu prices, ratings and offers are sample content.')
  ]},
@@ -97,13 +97,13 @@ PAGES = [
   ('h','Verified calculation example'),
   ('p','Two Large Double Beef Cheese Burgers cost 2 x (UGX 35,000 + UGX 5,000) = UGX 80,000. BITEWELCOME subtracts UGX 5,000. Delivery adds UGX 3,500. The confirmed total is <b>UGX 78,500</b>.'),
   ('h','Offers and checkout'),
-  ('p','BITEWELCOME applies when the subtotal is at least UGX 25,000. PLATTER30 discounts only Goat Pilau Special items by 30%. One coupon is supported per order; an invalidated coupon is removed after cart changes. Pickup has no delivery fee.'),
+  ('p','BITEWELCOME applies when the subtotal is at least UGX 25,000. PLATTER30 discounts only Chicken Pilau Special items by 30%. One coupon is supported per order; an invalidated coupon is removed after cart changes. Pickup has no delivery fee. A dish marked Free Delivery waives the delivery fee for the order.'),
   ('p','Checkout requires a name, phone number, delivery address where applicable, and acknowledgment that the order is a demo. Cash, mobile money and card choices save a preference without requesting real payment credentials.')
  ]},
  {'title':'Built for the small screen.','kicker':'05 / RESPONSIVENESS & ACCESSIBILITY','blocks':[
   ('img',('screenshots/responsive.jpg',None,'Actual browser frames at 320, 390 and 440px. Scrollbars reduce the available content area to 305, 375 and 425px in this environment.')),
   ('h','Responsive behaviour'),
-  ('p','The site uses max-width: 440px with a full-width layout below that size. Desktop space forms a quiet background around the phone-width app. Menu, recommendation and favourite lists show one full-width photo card per row, as in reference B. Categories and popular dishes scroll horizontally inside the app; the page itself has no horizontal overflow in the checked frames.'),
+  ('p','Food cards retain the Figma information layout: name and price share a row, rating and review count follow, timing and delivery details sit above a full-width Add to Cart button. The site uses max-width: 440px with a full-width layout below that size. Desktop space forms a quiet background around the phone-width app. Menu, recommendation and favourite lists show one full-width photo card per row, as in reference B. Categories and popular dishes scroll horizontally inside the app; the page itself has no horizontal overflow in the checked frames.'),
   ('h','Interaction and accessibility decisions'),
   ('p','Buttons have descriptive labels. Inputs have labels and native validation. Dialogs use the browser’s modal focus behaviour. The site includes a skip link, visible keyboard focus, a live status region for feedback, active navigation states, reduced-motion support and meaningful image descriptions.'),
   ('h','Verification limits'),
@@ -111,12 +111,12 @@ PAGES = [
  ]},
  {'title':'State, validation and proof.','kicker':'06 / TECHNICAL IMPLEMENTATION & TESTING','blocks':[
   ('table',(['File / component','Responsibility'],[
-   ['index.html','Semantic application shell, dialog, navigation and live status region.'],['styles.css','Mobile shell, layouts, components, responsive and reduced-motion rules.'],['app.js','Catalogue, route rendering, event handlers, account state and pricing rules.'],['assets/','Bundled food photography, favicon and default Sanyu image.'],['tests/','Pricing, filtering, account isolation and responsive check fixture.'],['vercel.json','Static deployment settings and basic response headers.']])),
+   ['index.html','Semantic application shell, dialog, navigation and live status region.'],['styles.css','Mobile shell, layouts, components, responsive and reduced-motion rules.'],['app.js','Catalogue, route rendering, event handlers, account state and pricing rules.'],['assets/','Personal Sanyu image and favicon; food photos use external URLs.'],['tests/','Pricing, filtering, account isolation and responsive check fixture.'],['vercel.json','Static deployment settings and basic response headers.']])),
   ('h','Data and account model'),
   ('p','Local storage separates guest data from each account’s profile, addresses, cart, favourites and orders. New accounts inherit Sanyu’s photograph. Settings accepts JPG, PNG and WebP images up to 5MB, resizes them locally and can restore the default. Passwords are derived with PBKDF2-SHA256, 100,000 iterations and a random 16-byte salt.'),
   ('p','<b>Production boundary:</b> Browser storage can be inspected and modified locally. A real launch would need server authentication, database-backed order ownership, server-side prices, a payment integration and restaurant fulfilment.'),
-  ('h','Automated tests: 9 passed'),
-  ('p','Coverage: unique catalogue IDs and categories; size/quantity/delivery totals; coupon threshold; eligible-item discount; combined search and filters; HTML escaping; default photo and account/cart isolation; incorrect-password and duplicate-email rejection; non-secure-preview cart ID fallback.'),
+  ('h','Automated tests: 10 passed'),
+  ('p','Coverage: unique catalogue IDs and categories; size/quantity/delivery totals; coupon threshold; eligible-item discount; free-delivery order eligibility; combined search and filters; HTML escaping; default photo and account/cart isolation; incorrect-password and duplicate-email rejection; non-secure-preview cart ID fallback.'),
   ('h','Browser checks completed'),
   ('p','Burger customisation and live totals; kitchen-note persistence; cart and coupon; simulated mobile-money checkout; saved order and tracking progression; address creation; coffee search; budget/price filters; profile; and responsive frame inspection. The HTTP preview UUID issue was found and fixed.'),
   ('p','Run <b>npm test</b> and <b>npm run check</b> from the repository root. Tests use Node built-ins and need no package installation.')
@@ -129,7 +129,7 @@ PAGES = [
   ('table',(['Submission item','Status'],[
    ['HTML, CSS and JavaScript source','Included in the repository.'],['Working front-end demonstration','Included; deploy the repository on Vercel.'],['Illustrated report','HTML and PDF included with supplied and live screenshots.'],['Figma design evidence','Provided screenshots included. Add the actual Figma project URL.'],['Paper sketches','Add original paper sketches if required. Digital reconstruction included.'],['User research findings','Add only findings from interviews or surveys actually conducted.']])),
   ('h','Evidence and credits'),
-  ('p','Assignment brief and Figma screenshots: supplied by the project owner. Default photograph: supplied Sanyu Judith image, included as requested. Additional food and kitchen photography: Unsplash; exact asset URLs are listed in docs/ASSET-CREDITS.md. Product names, ratings, costs and delivery progression are demonstration content.'),
+  ('p','Assignment brief and Figma screenshots: supplied by the project owner. Default photograph: supplied Sanyu Judith image, included as requested. Food and kitchen photos load from external Unsplash and Wikimedia Commons URLs. Creators, licences and image URLs are listed in docs/ASSET-CREDITS.md and docs/photo-credits.html. Product names, ratings, costs and delivery progression are demonstration content.'),
   ('p','<b>Repository:</b> github.com/abarintuma/bite-craft<br/><b>Project identity:</b> Sanyu Judith / BiteCraft')
  ]}
 ]
