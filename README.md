@@ -31,12 +31,14 @@ No environment variables, database or API keys are needed. Hash routes such as `
 
 - Welcome, sign-in, local account creation and sign-out.
 - Guest browsing as **Sanyu Judith**.
-- 24 dishes across burgers, pizza, local meals, chicken, healthy choices, drinks, desserts and breakfast.
+- 41 dishes across 11 categories: burgers, pizza, local meals, chicken, healthy choices, drinks, desserts, breakfast, pasta, grills and snacks.
 - Search, recent searches, food-type filtering, budget filters and sorting.
 - Dish details, ingredients, allergen notes, regular/large sizes, spice choices, kitchen notes and quantity controls.
+- Cards follow the Figma structure: photo, name/price row, rating/reviews, timing/delivery row and a full-width Add to Cart button.
 - Cart with editable quantities, removal, clearing and UGX totals.
+- Adding a dish marked Free Delivery waives the order delivery fee.
 - `BITEWELCOME`: UGX 5,000 off a food subtotal of UGX 25,000 or more.
-- `PLATTER30`: 30% off Goat Pilau Special items, including selected size. One coupon per order.
+- `PLATTER30`: 30% off Chicken Pilau Special items, including selected size. One coupon per order.
 - Delivery (UGX 3,500) or free pickup; saved addresses and directions.
 - Validated demo checkout and cash/mobile-money/card preferences.
 - Confirmation, receipt, order history, reorder and manually simulated tracking.
@@ -52,8 +54,8 @@ This is a functional **front-end assignment demonstration**, not a live restaura
 - Accounts, addresses, carts and orders exist only in the current browser’s local storage. They do not sync to another browser or device.
 - Passwords are derived with PBKDF2-SHA256 (100,000 iterations and a random salt). Browser-local sign-in is not production authentication. Use a demo-only password.
 - Payments, notifications and delivery are simulated. No card details, mobile-money prompt, real email or SMS is used.
-- Menu ratings, prices, offers and estimated times are sample data. Food photos are representative; some dishes share category imagery.
-- Google Fonts are optional; all food photos and the default profile photo are bundled locally.
+- Menu ratings, review counts, prices, offers and estimated times are sample data. Each food photo was reviewed against its named dish.
+- Food and kitchen photographs load directly from external Unsplash and Wikimedia Commons URLs. Only the personal Sanyu Judith photograph is bundled as an app image. Google Fonts remain optional.
 - A real service needs a backend, authoritative server prices, production authentication, payment integration and fulfilment.
 
 ## Assignment documentation
@@ -61,6 +63,7 @@ This is a functional **front-end assignment demonstration**, not a live restaura
 - [Illustrated report, web edition](docs/report.html)
 - [Illustrated report, PDF](docs/BiteCraft_Project_Report.pdf)
 - [Testing evidence](docs/TESTING.md)
+- [Photo credits, web edition](docs/photo-credits.html)
 - [Asset credits](docs/ASSET-CREDITS.md)
 - [Reconstructed wireframes](docs/wireframes.png)
 - [Supplied Figma overview](docs/figma-overview.jpg)
@@ -77,7 +80,7 @@ npm test
 npm run check
 ```
 
-Nine tests cover pricing, discounts, catalogue integrity, combined filtering, escaping, account isolation, default-photo behaviour, password validation and non-secure-preview cart IDs. They run entirely with Node built-ins.
+Ten tests cover pricing, discounts, free-delivery eligibility, catalogue integrity, combined filtering, escaping, account isolation, default-photo behaviour, password validation and non-secure-preview cart IDs. They run entirely with Node built-ins.
 
 To rebuild the report after updating the captured screenshots:
 
@@ -93,7 +96,7 @@ python scripts/build-report.py
 | `index.html` | Semantic app shell |
 | `styles.css` | Brand, mobile layout and components |
 | `app.js` | Menu, routing, state and interaction logic |
-| `assets/` | Bundled photos and favicon |
+| `assets/` | Sanyu’s personal photograph and the code-native favicon |
 | `docs/` | Reports, supplied references and screenshots |
 | `tests/` | Automated tests and responsive fixture |
 | `scripts/serve.cjs` | Dependency-free development server |

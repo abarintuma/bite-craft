@@ -1,0 +1,412 @@
+[
+  {
+    "id": "burger",
+    "dish": "Double Beef Cheese Burger",
+    "url": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1000&q=85",
+    "source": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1000&q=85",
+    "author": "Unsplash",
+    "license": "Unsplash License",
+    "licenseUrl": "https://unsplash.com/license",
+    "reviewedDescription": "Two flame-grilled beef patties, melted cheddar, fresh tomatoes, crisp lettuce and our signature sauce in a toasted brioche bun."
+  },
+  {
+    "id": "pizza",
+    "dish": "Chef Special Pizza",
+    "url": "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1000&q=85",
+    "source": "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1000&q=85",
+    "author": "Unsplash",
+    "license": "Unsplash License",
+    "licenseUrl": "https://unsplash.com/license",
+    "reviewedDescription": "A stone-baked pizza with bubbling cheese and a golden crust, served sliced."
+  },
+  {
+    "id": "platter",
+    "dish": "Chicken Pilau Special",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Chicken_Pilau.jpg/960px-Chicken_Pilau.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Chicken_Pilau.jpg",
+    "author": "Jameswasswa",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "reviewedDescription": "Spiced pilau rice with chicken pieces, finished with fresh herbs. A comforting East African favourite."
+  },
+  {
+    "id": "grilled-chicken",
+    "dish": "Herb Roast Chicken",
+    "url": "https://images.unsplash.com/photo-1598103442097-8b74394b95c6?auto=format&fit=crop&w=1000&q=85",
+    "source": "https://images.unsplash.com/photo-1598103442097-8b74394b95c6?auto=format&fit=crop&w=1000&q=85",
+    "author": "Unsplash",
+    "license": "Unsplash License",
+    "licenseUrl": "https://unsplash.com/license",
+    "reviewedDescription": "Golden roast chicken with crisp skin and a fragrant herb finish."
+  },
+  {
+    "id": "sushi",
+    "dish": "Sushi Deluxe Platter",
+    "url": "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=1000&q=85",
+    "source": "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=1000&q=85",
+    "author": "Unsplash",
+    "license": "Unsplash License",
+    "licenseUrl": "https://unsplash.com/license",
+    "reviewedDescription": "A colourful selection of salmon and vegetable rolls, with pickled ginger and soy sauce on the side."
+  },
+  {
+    "id": "salad",
+    "dish": "Avocado & Chickpea Bowl",
+    "url": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1000&q=85",
+    "source": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1000&q=85",
+    "author": "Unsplash",
+    "license": "Unsplash License",
+    "licenseUrl": "https://unsplash.com/license",
+    "reviewedDescription": "A colourful bowl of avocado, chickpeas, leafy greens and crisp vegetables."
+  },
+  {
+    "id": "pasta",
+    "dish": "Pesto Farfalle Pasta",
+    "url": "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=1000&q=85",
+    "source": "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=1000&q=85",
+    "author": "Unsplash",
+    "license": "Unsplash License",
+    "licenseUrl": "https://unsplash.com/license",
+    "reviewedDescription": "Bow-tie pasta tossed with green pesto, cherry tomatoes and fresh greens."
+  },
+  {
+    "id": "chicken-burger",
+    "dish": "Crispy Chicken Burger",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Fried_chicken_burger_.jpg/960px-Fried_chicken_burger_.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Fried_chicken_burger_.jpg",
+    "author": "Kurt Kaiser",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "reviewedDescription": "A crispy chicken burger layered with fresh vegetables and a rich house sauce."
+  },
+  {
+    "id": "veggie-pizza",
+    "dish": "Garden Veggie Pizza",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Vegetarian_Pizza.jpg/960px-Vegetarian_Pizza.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Vegetarian_Pizza.jpg",
+    "author": "Petar Milošević",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "reviewedDescription": "Vegetarian pizza slices topped with tomato, vegetables, cheese and fresh herbs."
+  },
+  {
+    "id": "matooke",
+    "dish": "Matooke & Groundnut Stew",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Ground_Nuts_stew_with_Matooke%2C_Sweet_potatoes_and_Nakati.jpg/960px-Ground_Nuts_stew_with_Matooke%2C_Sweet_potatoes_and_Nakati.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Ground_Nuts_stew_with_Matooke,_Sweet_potatoes_and_Nakati.jpg",
+    "author": "Owobusingye",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "reviewedDescription": "Steamed matooke, sweet potato and nakati greens with a bowl of groundnut stew."
+  },
+  {
+    "id": "rolex",
+    "dish": "Kampala Classic Rolex",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Rolex_wrap.jpg/960px-Rolex_wrap.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Rolex_wrap.jpg",
+    "author": "Roxanne.heston",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "reviewedDescription": "A classic Ugandan chapati rolled around a cooked egg omelette."
+  },
+  {
+    "id": "wings",
+    "dish": "Grilled BBQ Chicken Wings",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Barbecue-Chicken-Wings_13264-480x360_%284791356615%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "source": "https://commons.wikimedia.org/wiki/File:Barbecue-Chicken-Wings_13264-480x360_(4791356615).jpg",
+    "author": "Emilian Robert Vicol from Com. Balanesti, Romania",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "reviewedDescription": "Chicken wings grilled until golden with a savoury barbecue marinade."
+  },
+  {
+    "id": "fries",
+    "dish": "Parmesan & Herb Fries",
+    "url": "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=1000&q=85",
+    "source": "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=1000&q=85",
+    "author": "Unsplash",
+    "license": "Unsplash License",
+    "licenseUrl": "https://unsplash.com/license",
+    "reviewedDescription": "Golden potato fries finished with grated cheese and chopped herbs."
+  },
+  {
+    "id": "orange",
+    "dish": "Fresh Orange Juice",
+    "url": "https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=1000&q=85",
+    "source": "https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=1000&q=85",
+    "author": "Unsplash",
+    "license": "Unsplash License",
+    "licenseUrl": "https://unsplash.com/license",
+    "reviewedDescription": "Sunshine in a cup. Freshly squeezed orange juice with no added sugar. 350 ml."
+  },
+  {
+    "id": "passion",
+    "dish": "Passion Fruit Cooler",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Passion_Fruit_Juice_-_%E0%B4%AA%E0%B4%BE%E0%B4%B7%E0%B5%BB_%E0%B4%AB%E0%B5%8D%E0%B4%B0%E0%B5%82%E0%B4%9F%E0%B5%8D%E0%B4%9F%E0%B5%8D_%E0%B4%9C%E0%B5%8D%E0%B4%AF%E0%B5%82%E0%B4%B8%E0%B5%8D.jpg/960px-Passion_Fruit_Juice_-_%E0%B4%AA%E0%B4%BE%E0%B4%B7%E0%B5%BB_%E0%B4%AB%E0%B5%8D%E0%B4%B0%E0%B5%82%E0%B4%9F%E0%B5%8D%E0%B4%9F%E0%B5%8D_%E0%B4%9C%E0%B5%8D%E0%B4%AF%E0%B5%82%E0%B4%B8%E0%B5%8D.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Passion_Fruit_Juice_-_%E0%B4%AA%E0%B4%BE%E0%B4%B7%E0%B5%BB_%E0%B4%AB%E0%B5%8D%E0%B4%B0%E0%B5%82%E0%B4%9F%E0%B5%8D%E0%B4%9F%E0%B5%8D_%E0%B4%9C%E0%B5%8D%E0%B4%AF%E0%B5%82%E0%B4%B8%E0%B5%8D.jpg",
+    "author": "Shijan Kaakkara",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "reviewedDescription": "A refreshingly tangy passion fruit cooler, served chilled. 350 ml."
+  },
+  {
+    "id": "latte",
+    "dish": "Ugandan Coffee Latte",
+    "url": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1000&q=85",
+    "source": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1000&q=85",
+    "author": "Unsplash",
+    "license": "Unsplash License",
+    "licenseUrl": "https://unsplash.com/license",
+    "reviewedDescription": "Rich Ugandan espresso with silky steamed milk. A little pause in your day. 250 ml."
+  },
+  {
+    "id": "iced-coffee",
+    "dish": "Iced Caramel Latte",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Iced_caramel_latte.jpg/960px-Iced_caramel_latte.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Iced_caramel_latte.jpg",
+    "author": "Yashfaahmad123",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "reviewedDescription": "Iced coffee with milk and a caramel finish, served chilled. 350 ml."
+  },
+  {
+    "id": "water",
+    "dish": "Chilled Still Water",
+    "url": "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?auto=format&fit=crop&w=1000&q=85",
+    "source": "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?auto=format&fit=crop&w=1000&q=85",
+    "author": "Unsplash",
+    "license": "Unsplash License",
+    "licenseUrl": "https://unsplash.com/license",
+    "reviewedDescription": "A refreshing glass of still water. 500 ml serving."
+  },
+  {
+    "id": "icecream",
+    "dish": "Chocolate Brownie Sundae",
+    "url": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=1000&q=85",
+    "source": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=1000&q=85",
+    "author": "Unsplash",
+    "license": "Unsplash License",
+    "licenseUrl": "https://unsplash.com/license",
+    "reviewedDescription": "Layers of ice cream, chocolate brownie and a generous chocolate sauce topping."
+  },
+  {
+    "id": "cake",
+    "dish": "Chocolate Fudge Cake",
+    "url": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1000&q=85",
+    "source": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1000&q=85",
+    "author": "Unsplash",
+    "license": "Unsplash License",
+    "licenseUrl": "https://unsplash.com/license",
+    "reviewedDescription": "A whole chocolate cake finished with chocolate frosting and piped swirls."
+  },
+  {
+    "id": "fruit",
+    "dish": "Seasonal Fruit Bowl",
+    "url": "https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?auto=format&fit=crop&w=1000&q=85",
+    "source": "https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?auto=format&fit=crop&w=1000&q=85",
+    "author": "Unsplash",
+    "license": "Unsplash License",
+    "licenseUrl": "https://unsplash.com/license",
+    "reviewedDescription": "A colourful bowl of sliced fresh fruit and berries."
+  },
+  {
+    "id": "pancakes",
+    "dish": "Berry & Banana Pancakes",
+    "url": "https://images.unsplash.com/photo-1528207776546-365bb710ee93?auto=format&fit=crop&w=1000&q=85",
+    "source": "https://images.unsplash.com/photo-1528207776546-365bb710ee93?auto=format&fit=crop&w=1000&q=85",
+    "author": "Unsplash",
+    "license": "Unsplash License",
+    "licenseUrl": "https://unsplash.com/license",
+    "reviewedDescription": "A stack of golden pancakes topped with berries, banana slices and syrup."
+  },
+  {
+    "id": "breakfast",
+    "dish": "Avocado & Egg Toast",
+    "url": "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=1000&q=85",
+    "source": "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=1000&q=85",
+    "author": "Unsplash",
+    "license": "Unsplash License",
+    "licenseUrl": "https://unsplash.com/license",
+    "reviewedDescription": "Toasted bread topped with smashed avocado and a sunny-side-up egg."
+  },
+  {
+    "id": "chicken-pizza",
+    "dish": "Chicken & Herb Pizza",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Chicken_Pizza_made_in_Uganda.jpg/960px-Chicken_Pizza_made_in_Uganda.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Chicken_Pizza_made_in_Uganda.jpg",
+    "author": "James Moore200",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "reviewedDescription": "Pizza topped with chicken pieces, melted cheese and fresh herbs."
+  },
+  {
+    "id": "hawaiian",
+    "dish": "Hawaiian Pizza",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Hawaiian_pizza_1.jpg/960px-Hawaiian_pizza_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Hawaiian_pizza_1.jpg",
+    "author": "@joefoodie from USA",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "reviewedDescription": "Pizza topped with ham, pineapple and melted cheese."
+  },
+  {
+    "id": "veggie-burger",
+    "dish": "Triple Veggie Stack Burger",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/The_ultimate_veggie_burger.jpg/960px-The_ultimate_veggie_burger.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:The_ultimate_veggie_burger.jpg",
+    "author": "Sarah Afshar",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "reviewedDescription": "A tall stack of vegetable patties layered with tomato, cheese and greens in a bun."
+  },
+  {
+    "id": "wrap",
+    "dish": "Chicken & Avocado Wrap",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Smoked_chicken_and_avocado_wrap.jpg/960px-Smoked_chicken_and_avocado_wrap.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Smoked_chicken_and_avocado_wrap.jpg",
+    "author": "Takeaway",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "reviewedDescription": "A soft wrap filled with sliced chicken, avocado and leafy salad."
+  },
+  {
+    "id": "shawarma",
+    "dish": "Chicken Shawarma Wrap",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Chicken_Shawarma_Wrap_-_Lavash_2024-09-11.jpg/960px-Chicken_Shawarma_Wrap_-_Lavash_2024-09-11.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Chicken_Shawarma_Wrap_-_Lavash_2024-09-11.jpg",
+    "author": "Andy Li",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "reviewedDescription": "A toasted flatbread wrap filled with chicken shawarma, vegetables and sauce."
+  },
+  {
+    "id": "steak",
+    "dish": "Grilled Steak & Potatoes",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Grilled_beef_steak_in_Cala_P%C3%AD%2C_Mallorca%2C_Spain.jpg/960px-Grilled_beef_steak_in_Cala_P%C3%AD%2C_Mallorca%2C_Spain.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Grilled_beef_steak_in_Cala_P%C3%AD,_Mallorca,_Spain.jpg",
+    "author": "JIP",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "reviewedDescription": "A grilled beef steak served with golden sliced potatoes and a small salad."
+  },
+  {
+    "id": "fishchips",
+    "dish": "Fish, Chips & Peas",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Fish_and_chips_plate_with_peas.jpg/960px-Fish_and_chips_plate_with_peas.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Fish_and_chips_plate_with_peas.jpg",
+    "author": "Grendelkhan",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "reviewedDescription": "Crisp battered fish with chips, peas, lemon and tartare sauce."
+  },
+  {
+    "id": "bolognese",
+    "dish": "Spaghetti Bolognese",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Spaghetti_Bolognese_-_Figaros%2C_Brighton_2023-10-06.jpg/960px-Spaghetti_Bolognese_-_Figaros%2C_Brighton_2023-10-06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Spaghetti_Bolognese_-_Figaros,_Brighton_2023-10-06.jpg",
+    "author": "Andy Li",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "reviewedDescription": "Spaghetti with a rich minced-meat tomato sauce and grated cheese."
+  },
+  {
+    "id": "lasagne",
+    "dish": "Baked Meat Lasagne",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Lasagne_piece.jpg/960px-Lasagne_piece.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Lasagne_piece.jpg",
+    "author": "Donna Alvita",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "reviewedDescription": "Baked pasta layered with meat sauce, creamy sauce and a golden cheese topping."
+  },
+  {
+    "id": "soup",
+    "dish": "Tomato Soup",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Tomato_soup_-_Bon_App%C3%A9tit.jpg/960px-Tomato_soup_-_Bon_App%C3%A9tit.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Tomato_soup_-_Bon_App%C3%A9tit.jpg",
+    "author": "JIP",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "reviewedDescription": "A bowl of smooth tomato soup, served warm."
+  },
+  {
+    "id": "samosa",
+    "dish": "Vegetable Samosas",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Vegetable_Samosa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "source": "https://commons.wikimedia.org/wiki/File:Vegetable_Samosa.jpg",
+    "author": "Rajan1981",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "reviewedDescription": "Crisp triangular pastry parcels filled with seasoned vegetables."
+  },
+  {
+    "id": "mandazi",
+    "dish": "Golden Mandazi",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/6/69/Bowl_of_mandazi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "source": "https://commons.wikimedia.org/wiki/File:Bowl_of_mandazi.jpg",
+    "author": "The original uploader was ChildofMidnight at English Wikipedia.",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "reviewedDescription": "A bowl of golden East African fried dough bites."
+  },
+  {
+    "id": "chapati",
+    "dish": "Flaky Layered Chapati",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Flaky_layered_chapati_served_at_The_Well_in_Karen%2C_Nairobi.jpg/960px-Flaky_layered_chapati_served_at_The_Well_in_Karen%2C_Nairobi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Flaky_layered_chapati_served_at_The_Well_in_Karen,_Nairobi.jpg",
+    "author": "Lebu Ayiga",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "reviewedDescription": "A plate of soft, flaky layered chapati."
+  },
+  {
+    "id": "tilapia",
+    "dish": "Whole Fried Fish Platter",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Fried_fish%2C_chips%2C_matooke_and_kacumbali%2C_ready_to_devour_at_Port_Bell_%2C_Luzira_-_Kampala%2C_Uganda.jpg/960px-Fried_fish%2C_chips%2C_matooke_and_kacumbali%2C_ready_to_devour_at_Port_Bell_%2C_Luzira_-_Kampala%2C_Uganda.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Fried_fish,_chips,_matooke_and_kacumbali,_ready_to_devour_at_Port_Bell_,_Luzira_-_Kampala,_Uganda.jpg",
+    "author": "Ssemmanda will",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "reviewedDescription": "Whole fried fish served with chips, matooke and fresh kachumbari."
+  },
+  {
+    "id": "beans",
+    "dish": "Posho & Beans",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Africa_ugali_and_beans.jpg/960px-Africa_ugali_and_beans.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Africa_ugali_and_beans.jpg",
+    "author": "Moseslukyamuzi",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "reviewedDescription": "Soft white posho served with a hearty helping of stewed beans."
+  },
+  {
+    "id": "rice",
+    "dish": "Vegetable Fried Rice",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Vegetable_Fried_Rice.jpg/960px-Vegetable_Fried_Rice.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Vegetable_Fried_Rice.jpg",
+    "author": "Gaurav Dhwaj Khadka",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "reviewedDescription": "Fried rice tossed with chopped carrots, greens and mixed vegetables."
+  },
+  {
+    "id": "milkshake",
+    "dish": "Strawberry Milkshake",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Strawberry_milk_shake_%28cropped%29.jpg/960px-Strawberry_milk_shake_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Strawberry_milk_shake_(cropped).jpg",
+    "author": "Renee Comet (Photographer)",
+    "license": "Public domain",
+    "licenseUrl": "https://commons.wikimedia.org/wiki/File:Strawberry_milk_shake_(cropped).jpg",
+    "reviewedDescription": "A chilled pink strawberry milkshake served in a tall glass. 350 ml."
+  },
+  {
+    "id": "waffles",
+    "dish": "Berry & Banana Waffles",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Belgian_waffles_%26_fruit_-_Brewhouse_%26_Kitchen_2026-04-14.jpg/960px-Belgian_waffles_%26_fruit_-_Brewhouse_%26_Kitchen_2026-04-14.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Belgian_waffles_%26_fruit_-_Brewhouse_%26_Kitchen_2026-04-14.jpg",
+    "author": "Andy Li",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "reviewedDescription": "Belgian waffles with sliced banana, berries and a dollop of cream."
+  }
+]

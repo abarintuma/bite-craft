@@ -5,7 +5,7 @@ const item = (id,qty=1,size='Regular')=>({id,qty,size});
 
 test('catalogue has unique IDs, valid prices and an item for every category',()=>{
   assert.equal(new Set(MENU.map(p=>p.id)).size,MENU.length);
-  assert.ok(MENU.length>=24);
+  assert.ok(MENU.length>=40);
   for(const p of MENU) assert.ok(Number.isInteger(p.price)&&p.price>0);
   for(const [category] of CATEGORIES.slice(1)) assert.ok(MENU.some(p=>p.category===category));
 });
@@ -35,4 +35,11 @@ test('search, category, diet type, budget and sorting compose correctly',()=>{
 test('user text is escaped and default photo is Sanyu',()=>{
   assert.equal(escapeHTML('<img src=x onerror="alert(1)">'), '&lt;img src=x onerror=&quot;alert(1)&quot;&gt;');
   assert.equal(DEFAULT_PHOTO,'assets/sanyu-judith.jpg');
+});
+
+test('free delivery badge waives the entire order fee and survives mixed carts',()=>{
+  assert.equal(totals([item('pizza')],'').delivery,0);
+  assert.equal(totals([item('pizza'),item('burger')],'').total,67000);
+  assert.equal(totals([item('burger')],'').delivery,3500);
+  assert.equal(totals([item('pizza')],'BITEWELCOME').total,27000);
 });

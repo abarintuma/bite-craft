@@ -1,6 +1,6 @@
 # BiteCraft verification — 25 October 2026
 
-## Automated: 9 tests passed
+## Automated: 10 tests passed
 
 Run `npm test` and `npm run check` from the root. Node tests require no installed packages.
 
@@ -10,6 +10,7 @@ Run `npm test` and `npm run check` from the root. Node tests require no installe
 | Quantity, large size, pickup and delivery totals | Passed |
 | Welcome coupon minimum subtotal | Passed |
 | Platter-only percentage discount | Passed |
+| Free-delivery dishes waive the fee for single and mixed carts | Passed |
 | Combined search/category/type/budget/sort | Passed |
 | Escaping user text and default-photo constant | Passed |
 | Two accounts inherit Sanyu photo and have separate carts | Passed |
@@ -49,3 +50,14 @@ Screenshots in `docs/screenshots/` show the actual tested implementation. Some f
 ## Design correction verification
 
 Main food cards now occupy one full-width row in Menu, Home recommendations and Favourites, matching reference B. Popular-food and category carousels remain horizontal. Browser geometry checks confirmed stacked rows without horizontal page overflow in 320, 390 and 440px frames. Computed styles confirmed primary `rgb(180, 31, 4)` (`#B41F04`), Plus Jakarta Sans headings and Inter body text. The cart example still totals UGX 78,500.
+
+## Card fidelity and external photo update
+
+- Cards match the supplied Figma example: photo and overlays; name left and PRICE/value right; rating and review count; delivery/prep/free-delivery row; full-width Add to Cart.
+- Catalogue expanded from 24 to 41 dishes across 11 categories.
+- All 41 external image URLs returned HTTP 200 with an image content type. Candidate images were visually reviewed against their dishes; incorrect mappings (including Rolex, pilau, chicken burger, iced coffee and breakfast) were replaced or accurately renamed.
+- Stock food and kitchen JPEGs were removed from `assets/`. The personal Sanyu Judith photograph remains local. Documentation screenshots remain as assignment evidence.
+- Public photo credits include creator, original source and licence for Creative Commons photos.
+- Browser test: Add Chef Special Pizza to cart → UGX 32,000 subtotal, Free delivery, UGX 32,000 total.
+
+- Browser checks after expansion: Rolex and Chicken Pilau photos loaded from their actual Wikimedia URLs. Name/price alignment and full-width buttons passed at 320, 390 and 440px frame widths, with no horizontal page overflow.
