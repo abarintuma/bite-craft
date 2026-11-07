@@ -30,13 +30,18 @@ else:
 W, H = A4
 M = 46
 WIDTH = W - 2 * M
-body = ParagraphStyle('Body', fontName=FONT, fontSize=10.5, leading=15, spaceAfter=9)
-heading = ParagraphStyle('Heading', fontName=BOLD, fontSize=12.5, leading=18, spaceAfter=7)
-caption = ParagraphStyle('Caption', fontName=FONT, fontSize=9, leading=12, spaceAfter=10)
-title = ParagraphStyle('Title', fontName=BOLD, fontSize=21, leading=27, spaceAfter=16)
+RED = colors.HexColor('#B41F04')
+INK = colors.HexColor('#30241D')
+CREAM = colors.HexColor('#FFF9F3')
+ORANGE = colors.HexColor('#F9A44A')
+MUTED = colors.HexColor('#76675B')
+body = ParagraphStyle('Body', fontName=FONT, fontSize=10.5, leading=15, spaceAfter=9, textColor=INK)
+heading = ParagraphStyle('Heading', fontName=BOLD, fontSize=12.5, leading=18, spaceAfter=7, textColor=RED)
+caption = ParagraphStyle('Caption', fontName=FONT, fontSize=9, leading=12, spaceAfter=10, textColor=MUTED)
+title = ParagraphStyle('Title', fontName=BOLD, fontSize=21, leading=27, spaceAfter=16, textColor=RED)
 pdf = canvas.Canvas(str(OUT), pagesize=A4, pageCompression=1)
 pdf.setTitle('BiteCraft UI UX Design Report')
-pdf.setAuthor('Sanyu Judith')
+pdf.setAuthor('Group C')
 pdf.setSubject('Mobile food ordering interface')
 y = H
 
@@ -51,16 +56,30 @@ def text(content, style=body):
     y -= height + style.spaceAfter
 
 
+def background(number):
+    pdf.setFillColor(CREAM)
+    pdf.rect(0, 0, W, H, fill=1, stroke=0)
+    pdf.setFillColor(RED)
+    pdf.rect(0, 0, 7, H, fill=1, stroke=0)
+    pdf.setFont(BOLD, 8)
+    pdf.drawString(M, H - 29, 'BITECRAFT  /  GROUP C')
+    pdf.setFillColor(MUTED)
+    pdf.setFont(FONT, 8)
+    pdf.drawRightString(W - M, H - 29, 'UI/UX DESIGN')
+    pdf.setStrokeColor(ORANGE)
+    pdf.setLineWidth(1.5)
+    pdf.line(M, H - 41, W - M, H - 41)
+    pdf.setFillColor(MUTED)
+    pdf.setFont(FONT, 8)
+    pdf.drawString(M, 25, 'Group C | Mobile food ordering')
+    pdf.drawRightString(W - M, 25, f'{number:02d} / 07')
+
+
 def page(number, name):
     global y
-    if number > 1:
-        pdf.showPage()
-    pdf.setFillColor(colors.black)
-    pdf.setFont(FONT, 8.5)
-    pdf.drawString(M, H - 28, 'BITECRAFT  |  UI/UX DESIGN')
-    pdf.drawString(M, 25, 'Sanyu Judith')
-    pdf.drawRightString(W - M, 25, str(number))
-    y = H - 62
+    pdf.showPage()
+    background(number + 1)
+    y = H - 66
     text(name, title)
 
 
@@ -74,7 +93,10 @@ def image(path, x, top, max_width, max_height):
         width, height = source.size
         scale = min(max_width / width, max_height / height)
         data = BytesIO()
-        source.convert('RGB').save(data, format='JPEG', quality=85, optimize=True)
+        preview = source.convert('RGB')
+        # Embed enough pixels for clear print output without storing oversized photos.
+        preview.thumbnail((max(1, round(width * scale * 2.5)), max(1, round(height * scale * 2.5))), Image.Resampling.LANCZOS)
+        preview.save(data, format='JPEG', quality=85, optimize=True)
         data.seek(0)
         w, h = width * scale, height * scale
         pdf.drawImage(ImageReader(data), x + (max_width - w) / 2, top - h, w, h)
@@ -98,12 +120,13 @@ def images(items, max_height):
 def table(headers, rows, widths=None):
     global y
     data = [[Paragraph(escape(str(value)), ParagraphStyle('Cell',
-             fontName=BOLD if i == 0 else FONT, fontSize=9, leading=13))
+             fontName=BOLD if i == 0 else FONT, fontSize=9, leading=13, textColor=colors.white if i == 0 else INK))
              for value in row] for i, row in enumerate([headers, *rows])]
     t = Table(data, colWidths=widths or [WIDTH / len(headers)] * len(headers))
     t.setStyle(TableStyle([
-        ('BACKGROUND', (0, 0), (-1, 0), colors.HexColor('#F1F1F1')),
-        ('GRID', (0, 0), (-1, -1), .4, colors.HexColor('#D9D9D9')),
+        ('BACKGROUND', (0, 0), (-1, 0), RED),
+        ('ROWBACKGROUNDS', (0, 1), (-1, -1), [colors.white, colors.HexColor('#FFF0E5')]),
+        ('LINEBELOW', (0, 1), (-1, -1), .4, colors.HexColor('#EAD9CC')),
         ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
         ('TOPPADDING', (0, 0), (-1, -1), 7),
         ('BOTTOMPADDING', (0, 0), (-1, -1), 7),
@@ -117,8 +140,41 @@ def table(headers, rows, widths=None):
     y -= height + 12
 
 
-page(1, 'BiteCraft UI UX Design Report')
-text('<b>Student</b> Sanyu Judith<br/><b>Project</b> Mobile food ordering interface<br/><b>Date</b> 7 November 2026')
+# Cover uses the same brand colours as the interface.
+background(1)
+pdf.setFillColor(RED)
+pdf.rect(7, H - 340, W - 7, 290, fill=1, stroke=0)
+pdf.setFillColor(ORANGE)
+pdf.setFont(BOLD, 10)
+pdf.drawString(M, H - 89, 'A LITTLE JOY IN EVERY BITE')
+pdf.setFillColor(colors.white)
+pdf.setFont(BOLD, 49)
+pdf.drawString(M - 2, H - 160, 'BiteCraft.')
+pdf.setFont(FONT, 18)
+pdf.drawString(M, H - 197, 'UI/UX Design Project Report')
+pdf.setFont(BOLD, 12)
+pdf.drawString(M, H - 247, 'GROUP C')
+pdf.setFont(FONT, 10)
+pdf.drawString(M, H - 270, '7 November 2026')
+pdf.setFillColor(ORANGE)
+pdf.roundRect(M, H - 308, 220, 4, 2, fill=1, stroke=0)
+image(Path('screenshots/menu.jpg'), W - M - 188, H - 367, 188, 407)
+y = H - 391
+cover_style = ParagraphStyle('CoverCopy', fontName=FONT, fontSize=11, leading=17, textColor=INK)
+for top, content in [
+    (H - 391, '<b>Food choices,<br/>clearly presented.</b>'),
+    (H - 453, 'From paper sketches to Figma designs and a working mobile ordering interface.'),
+    (H - 557, '<b>Inside this report</b><br/>Research and requirements<br/>Sketches and design decisions<br/>Figma screens<br/>Working interface<br/>Checks and demonstration'),
+]:
+    para = Paragraph(content, cover_style)
+    _, ph = para.wrap(250, 300)
+    para.drawOn(pdf, M, top - ph)
+para = Paragraph('<link href="https://bite-craft-lemon.vercel.app/" color="#B41F04">Open the website</link><br/><link href="https://github.com/abarintuma/bite-craft" color="#B41F04">View the source repository</link>', caption)
+_, ph = para.wrap(250, 80)
+para.drawOn(pdf, M, 83 - ph)
+
+page(1, 'Research and requirements')
+text('<b>Prepared by</b> Group C<br/><b>Project</b> Mobile food ordering interface<br/><b>Date</b> 7 November 2026')
 section('Introduction')
 text('BiteCraft helps a customer browse food and drinks, customise a meal and review the cost before confirming an order. The interface uses HTML, CSS and JavaScript. Its main journey is Home, Menu, Food details, Cart, Checkout and Confirmation.')
 section('User research')
@@ -155,9 +211,9 @@ images([(Path('design/figma-menu.png'), 'Menu'),
         (Path('design/figma-item.png'), 'Food details'),
         (Path('design/figma-cart.png'), 'Cart')], 450)
 text('The Menu supports discovery, the details page supports customisation, and the Cart groups quantities, delivery information and the total. Repeated colours, type and navigation connect the screens.')
-section('Design file')
-text(f'<link href="{FIGMA}">Open the BiteCraft Figma project</link>')
-text('Direct links to all seven frames and the supplied overview images are included in docs/design/README.md.')
+section('Interactive design')
+text(f'<link href="{FIGMA}" color="#B41F04">Open the BiteCraft Figma project</link>')
+text('Direct links to all seven frames and the supplied overview images are included in the combined coursework guide.')
 
 page(4, 'Mobile Home and Menu')
 text('The website keeps the mobile structure at a maximum width of 440 pixels. Search and categories help users find a dish, while visible UGX prices support comparison. The menu contains 41 dishes across 11 categories.')
@@ -181,7 +237,7 @@ table(['Calculation', 'Amount'], [
 text('The cart also supports quantity changes and removal. Checkout collects the required delivery details and records the selected payment preference.')
 
 page(6, 'Checks and presentation')
-text('The ten automated tests passed. They cover menu data, pricing, offers, filtering, account separation, password checks and the default photo. The mobile browser walkthrough checks the ordering journey and its totals.')
+text('All ten automated tests and the JavaScript syntax check passed on 7 November 2026. They cover menu data, pricing, offers, filtering, accounts and the default photo. Recorded browser checks cover the ordering journey.')
 images([(Path('screenshots/tracking.jpg'), 'Confirmation'),
         (Path('screenshots/profile.jpg'), 'Profile')], 250)
 table(['Browser check', 'Observed result'], [
@@ -192,7 +248,7 @@ table(['Browser check', 'Observed result'], [
     ['Phone layouts', 'One-column cards at 320, 390 and 440 pixels'],
 ], [175, WIDTH - 175])
 section('Demonstration')
-text('Show the paper sketches and Figma screens, then browse the menu, customise a burger, review the cart and confirm the order. Explain the price calculation and show order history. The full walkthrough is in docs/PRESENTATION.md.')
+text('Show the sketches and Figma screens, then browse the menu, customise a burger, review the cart and confirm the order. Explain the price calculation and show order history. The combined coursework guide contains the full walkthrough.')
 text('BiteCraft brings food discovery, meal choices and order review into a clear mobile interface. The sketches, designs and working website demonstrate the same journey.')
 
 pdf.save()
