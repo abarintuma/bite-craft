@@ -1,104 +1,91 @@
 # BiteCraft
 
-**Food for everyone. A mobile food-ordering interface for Sanyu Judith.**
+**Sanyu Judith · UI/UX Design coursework**
 
-Built from the supplied Figma prototype screenshots using plain HTML, CSS and JavaScript. The app stays **phone-width (maximum 440px)** even on a large desktop screen. Main food lists use **one full-width card per row**, matching reference B; the horizontal popular-food and category carousels remain separate. The primary colour is **#B41F04**, with **Plus Jakarta Sans** headings and **Inter** body text.
+BiteCraft is a mobile food-ordering interface built with HTML, CSS and JavaScript. Users can explore food and drinks, customise a dish, review their cart and record an order.
 
-![BiteCraft implementation](docs/screenshots/home-desktop.jpg)
+[Open BiteCraft](https://bite-craft-lemon.vercel.app/) · [Read the PDF report](docs/BiteCraft_Project_Report.pdf) · [Open the Figma designs](https://www.figma.com/design/uXvZEoR0YnAhbe41bstIhl/food-deliver?node-id=0-1)
 
-## Run locally
+![BiteCraft mobile menu](docs/screenshots/menu.jpg)
 
-With Node.js 20 or newer:
+## Run the application
+
+Use Node.js 20 or later. No package installation is needed.
 
 ```sh
 npm run dev
 ```
 
-Open `http://localhost:3000`. There are no npm dependencies to install and no build step. Use localhost or HTTPS for account creation, because password hashing uses Web Crypto. Alternatively, serve the repository root with any static server. Opening `index.html` directly is less reliable because browser storage and cryptographic APIs vary for `file:` URLs.
+Open `http://localhost:3000`. Choose **Get started** to sign in or create an account, or use **Browse the menu** to explore as Sanyu Judith.
 
-## Deploy on Vercel
+## Main journey
 
-1. Import **abarintuma/bite-craft** into Vercel.
-2. Choose **Other** as the Framework Preset.
-3. Keep the Root Directory at the repository root (`./`).
-4. Leave the Build Command blank and disabled.
-5. Set Output Directory to `.` if Vercel asks for one (static files are at the repository root).
-6. Deploy and open the HTTPS URL.
+Home → Menu → Food details → Cart → Checkout → Order confirmation.
 
-No environment variables, database or API keys are needed. Hash routes such as `/#menu` work with static hosting; no SPA catch-all rewrite is necessary.
+- Browse 41 dishes across 11 categories, search the menu and filter by budget.
+- Select size, spice level and quantity, and add a kitchen note.
+- Edit the cart, choose delivery or pickup and review UGX totals.
+- Apply `BITEWELCOME` for 5,000 UGX off a food subtotal of at least 25,000 UGX.
+- Apply `PLATTER30` for 30% off eligible Chicken Pilau Special items.
+- Save favourites, addresses and orders; view order history and tracking.
+- Create a separate account and change the profile photo in Settings.
 
-## Working features
+The interface keeps a maximum width of 440 pixels. Main food lists have one full-width card per row; category and popular-food rows scroll horizontally. The primary colour is `#B41F04`, with Plus Jakarta Sans headings and Inter body text. Sanyu Judith's photograph is the default for every account until it is changed in Settings. Food photographs use external URLs.
 
-- Welcome, sign-in, local account creation and sign-out.
-- Guest browsing as **Sanyu Judith**.
-- 41 dishes across 11 categories: burgers, pizza, local meals, chicken, healthy choices, drinks, desserts, breakfast, pasta, grills and snacks.
-- Search, recent searches, food-type filtering, budget filters and sorting.
-- Dish details, ingredients, allergen notes, regular/large sizes, spice choices, kitchen notes and quantity controls.
-- Cards follow the Figma structure: photo, name/price row, rating/reviews, timing/delivery row and a full-width Add to Cart button.
-- Cart with editable quantities, removal, clearing and UGX totals.
-- Adding a dish marked Free Delivery waives the order delivery fee.
-- `BITEWELCOME`: UGX 5,000 off a food subtotal of UGX 25,000 or more.
-- `PLATTER30`: 30% off Chicken Pilau Special items, including selected size. One coupon per order.
-- Delivery (UGX 3,500) or free pickup; saved addresses and directions.
-- Validated demo checkout and cash/mobile-money/card preferences.
-- Confirmation, receipt, order history, reorder and manually simulated tracking.
-- Favourites, in-app notifications, help, privacy information and profile settings.
-- Profile photo upload and default-photo restoration.
+## Coursework documents
 
-**Every newly created account uses the supplied Sanyu Judith photograph.** A different account name does not change the photo. Users can replace it only in Settings. Each account’s uploaded photo, cart, favourites and orders stay separate from the guest profile and other local accounts.
+| Material | Location |
+| --- | --- |
+| Illustrated PDF report | [BiteCraft Project Report](docs/BiteCraft_Project_Report.pdf) |
+| Research and intended users | [User research](docs/RESEARCH.md) |
+| Problem and main requirements | [Requirements](docs/REQUIREMENTS.md) |
+| Design decisions and Figma links | [Design notes](docs/DESIGN.md) |
+| Original paper sketches | [Hand-drawn sketches](docs/design/paper-sketches.jpeg) |
+| Figma screen exports | [Design evidence](docs/design/README.md) |
+| Mobile website screenshots | [Implementation screenshots](docs/screenshots/README.md) |
+| Test results | [Testing](docs/TESTING.md) |
+| Presentation walkthrough | [Presentation guide](docs/PRESENTATION.md) |
+| Assignment instructions | [Assignment image](docs/assignment/assignment.jpg) |
 
-## Demo boundaries
+[Browse the document index](docs/README.md).
 
-This is a functional **front-end assignment demonstration**, not a live restaurant service:
+## Repository layout
 
-- Accounts, addresses, carts and orders exist only in the current browser’s local storage. They do not sync to another browser or device.
-- Passwords are derived with PBKDF2-SHA256 (100,000 iterations and a random salt). Browser-local sign-in is not production authentication. Use a demo-only password.
-- Payments, notifications and delivery are simulated. No card details, mobile-money prompt, real email or SMS is used.
-- Menu ratings, review counts, prices, offers and estimated times are sample data. Each food photo was reviewed against its named dish.
-- Food and kitchen photographs load directly from external Unsplash and Wikimedia Commons URLs. Only the personal Sanyu Judith photograph is bundled as an app image. Google Fonts remain optional.
-- A real service needs a backend, authoritative server prices, production authentication, payment integration and fulfilment.
+| Path | Purpose |
+| --- | --- |
+| `index.html` | Application page and asset loading |
+| `app.js` | Menu, screens, navigation and interactions |
+| `styles.css` | Colours, typography, cards and responsive layout |
+| `assets/` | Profile photograph and favicon |
+| `docs/` | Report, assignment, sketches, design exports and screenshots |
+| `tests/` | Automated checks and responsive layout fixture |
+| `scripts/` | Local server and PDF report builder |
+| `vercel.json` | Static hosting configuration |
 
-## Assignment documentation
-
-- [Illustrated report, web edition](docs/report.html)
-- [Illustrated report, PDF](docs/BiteCraft_Project_Report.pdf)
-- [Testing evidence](docs/TESTING.md)
-- [Photo credits, web edition](docs/photo-credits.html)
-- [Asset credits](docs/ASSET-CREDITS.md)
-- [Reconstructed wireframes](docs/wireframes.png)
-- [Supplied Figma overview](docs/figma-overview.jpg)
-- [Manual responsive layout fixture](tests/responsive.html)
-
-The report includes requirements analysis, audience assumptions, problem statement, ideation, wireframes, Figma references, implementation screenshots, validation, testing and a presentation walkthrough.
-
-**Before academic submission:** add the actual Figma project URL, original paper sketches and findings from any interviews or surveys actually conducted. No research participants, results or quotations have been invented. The digital wireframes are reconstructions, not original paper sketches.
-
-## Verify
+## Check the application
 
 ```sh
 npm test
 npm run check
 ```
 
-Ten tests cover pricing, discounts, free-delivery eligibility, catalogue integrity, combined filtering, escaping, account isolation, default-photo behaviour, password validation and non-secure-preview cart IDs. They run entirely with Node built-ins.
+The ten automated tests cover menu data, totals, offers, filtering, account separation and the default photo.
 
-To rebuild the report after updating the captured screenshots:
+## Rebuild the report
 
 ```sh
 python -m pip install reportlab pillow
 python scripts/build-report.py
 ```
 
-## Source map
+The builder uses the paper sketches, Figma exports and mobile screenshots in `docs/` to produce the PDF.
 
-| Path | Purpose |
-| --- | --- |
-| `index.html` | Semantic app shell |
-| `styles.css` | Brand, mobile layout and components |
-| `app.js` | Menu, routing, state and interaction logic |
-| `assets/` | Sanyu’s personal photograph and the code-native favicon |
-| `docs/` | Reports, supplied references and screenshots |
-| `tests/` | Automated tests and responsive fixture |
-| `scripts/serve.cjs` | Dependency-free development server |
-| `scripts/build-report.py` | Reproducible illustrated report generation |
-| `vercel.json` | Static deployment configuration |
+## Deploy
+
+Import [abarintuma/bite-craft](https://github.com/abarintuma/bite-craft) into Vercel. Select **Other** as the framework, keep the repository root, leave the build command empty and use `.` as the output directory. The included configuration supports the application's hash routes.
+
+## Images and credits
+
+[Photo credits](docs/photo-credits.html) · [Asset sources](docs/ASSET-CREDITS.md).
+
+Account and order records are kept in the browser. Checkout records the selected payment preference; payment processing and the delivery timeline are demonstrations.
